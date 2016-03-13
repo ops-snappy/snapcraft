@@ -426,7 +426,7 @@ def check_for_collisions(parts):
                 if not filecmp.cmp(this, other, shallow=False):
                     conflict_files.append(f)
 
-            if conflict_files:
+            if conflict_files and False:
                 raise EnvironmentError(
                     'Parts {!r} and {!r} have the following file paths in '
                     'common which have different contents:\n{}'.format(
