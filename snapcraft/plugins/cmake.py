@@ -72,7 +72,7 @@ class CMakePlugin(snapcraft.plugins.make.MakePlugin):
         env = self._build_environment()
 
         env["CPPFLAGS"] = env.get("CPPFLAGS", "") + " -DOPS"
-        env["CFLAGS"] = env.get("CFLAGS", "") + " -DOPS -DUSE_SW_FRU=on"
+        env["CFLAGS"] = env.get("CFLAGS", "") + " -DOPS"
         env["CXXFLAGS"] = env.get("CXXFLAGS", "") + " -DOPS"
 
         self.run(['cmake', sourcedir, '-DCMAKE_INSTALL_PREFIX=',
